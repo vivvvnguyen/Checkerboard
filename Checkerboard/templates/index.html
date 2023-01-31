@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Checkerboard</title>
+</head>
+<body>
+    <h1>*** Checkerboard ***</h1>
+    <div class="board">
+        <table>
+            {% for i in range (0, row) %}
+            <tr>
+                {% for j in range (0, column) %}
+                <td class = "color{{ (i + j)%2 +1}}"></td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+
+
+{# Level 1
+        <table>
+            {% for i in range num1 %}
+            <tr class="color1"></tr>
+            <tr class="color2"></tr>
+            {% endfor %}
+            {% for i in range num2 %} 
+            <tr class="color2"></tr>
+            <tr class="color1"></tr>
+        </table> 
+        {% for i in range (num1, num2) %}
+        <div class = boxes, style="background-color: {{color1}}, {{color2}};" ></div>
+        {% endfor %}
+#}
+    </div>
+</body>
+</html>
